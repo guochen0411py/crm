@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-1">
+                <div class="panel panel-success" style="margin-top: 10px">
+                    <div class="panel-heading">作业名称</div>
+                    <div class="panel-body">
+                        {{ homework.title }}
+                    </div>
+                </div>
+                <div class="panel panel-danger" style="margin-top: 10px">
+                    <div class="panel-heading">相关课程</div>
+                    <div class="panel-body">
+                        {{ homework.course_record }}
+                    </div>
+                </div>
+                <div class="panel panel-default" style="margin-top: 10px">
+                    <div class="panel-heading">截止时间</div>
+                    <div class="panel-body">
+                        {{ homework.hand_in_date|date:"Y-m-d" }}
+                    </div>
+                </div>
+                <div class="panel panel-warning" style="margin-top: 10px">
+                    <div class="panel-heading">作业内容</div>
+                    <div class="panel-body">
+                        {{ homework.content }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
